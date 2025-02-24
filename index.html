@@ -139,39 +139,42 @@
       min-height: 100vh;
     }
     
-    /* ----- Landing Section (Hero) ----- */
-#landing {
-  background: black; /* Solid black background */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-    /* Dark overlay for better text contrast */
-    #landing::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+    <!-- =====================
+     Landing Section (Hero)
+======================= -->
+<section id="landing">
+  <div class="content">
+    <img src="https://raw.githubusercontent.com/Bingbongbigdong/neobro-website/1d8534879b66fb11cdc14f0cefe24323f4bda844/assets/images/neobro-logo.png" 
+         alt="NEOBRO Logo" 
+         class="landing-logo">
+  </div>
+</section>
+
+<style>
+  #landing {
+    background: black; /* Solid black background */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+  }
+
+  .landing-logo {
+    max-width: 80%;
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .landing-logo {
+      max-width: 90%;
+      max-height: 50vh;
     }
-    /* Landing content styling using custom header font */
-    #landing .content {
-      position: relative;
-      z-index: 1;
-      font-family: 'BrolinkDemo', sans-serif;
-      color: #fff;
-    }
-    #landing h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    #landing p {
-      font-size: 1.2rem;
-    }
+  }
+</style>
     
     /* ----- Music Section ----- */
     #music {
