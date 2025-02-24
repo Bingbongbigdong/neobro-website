@@ -1,13 +1,3 @@
-<!--
-  DJ Artist Website Template (Updated)
-  - Uses a custom header font ("Brolink DEMO") loaded via @font-face.
-  - The header logo is now your provided logo image.
-  - Body text uses Roboto from Google Fonts.
-  - Includes a responsive navigation (desktop links & mobile hamburger menu).
-  - Sections: Landing, Music, Merch, Tour/Gigs, and Contact.
-  - Placeholder images from Picsum.photos and social icons from FontAwesome.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,20 +27,17 @@
     /* =====================
        Global Styles
     =======================*/
-    /* Reset margins/paddings and set box-sizing */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    /* Base body styling: dark background, light text, using Roboto */
     body {
       background-color: #111;
       color: #eee;
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
     }
-    /* Anchor tag styling */
     a {
       color: #eee;
       text-decoration: none;
@@ -70,12 +57,9 @@
       align-items: center;
       justify-content: space-between;
     }
-    /* Logo styling: now using the custom logo image */
     .logo img {
-      /* Adjust height as needed */
       height: 50px;
     }
-    /* Desktop navigation menu styling */
     nav ul.desktop-menu {
       list-style: none;
       display: flex;
@@ -84,18 +68,15 @@
     nav ul.desktop-menu li {
       margin-left: 2rem;
     }
-    /* Use custom header font for navigation links if desired */
     nav ul.desktop-menu li a {
       font-family: 'BrolinkDemo', sans-serif;
       font-size: 1rem;
     }
-    
-    /* Hamburger icon for mobile (hidden on desktop) */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      z-index: 1100; /* Ensure it's above the mobile menu */
+      z-index: 1100;
     }
     .hamburger span {
       height: 3px;
@@ -104,8 +85,6 @@
       margin-bottom: 4px;
       border-radius: 5px;
     }
-    
-    /* Mobile menu container (hidden by default) */
     .mobile-menu {
       display: none;
       position: absolute;
@@ -133,561 +112,6 @@
     /* =====================
        Section Styles
     =======================*/
-    /* General section spacing */
-    section {
-      padding: 100px 2rem;
-      min-height: 100vh;
-    }
-    
-    <!-- =====================
-     Landing Section (Hero)
-======================= -->
-<section id="landing">
-  <div class="content">
-    <img src="https://raw.githubusercontent.com/Bingbongbigdong/neobro-website/1d8534879b66fb11cdc14f0cefe24323f4bda844/assets/images/neobro-logo.png" 
-         alt="NEOBRO Logo" 
-         class="landing-logo">
-  </div>
-</section>
-
-<style>
-  #landing {
-    background: black; /* Solid black background */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh; /* Full screen height */
-  }
-
-  .landing-logo {
-    max-width: 80%;
-    max-height: 60vh;
-    width: auto;
-    height: auto;
-  }
-
-  @media (max-width: 768px) {
-    .landing-logo {
-      max-width: 90%;
-      max-height: 50vh;
-    }
-  }
-</style>
-    
-    /* ----- Music Section ----- */
-    #music {
-      background-color: #1a1a1a;
-    }
-    #music h2 {
-      font-family: 'BrolinkDemo', sans-serif;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
-    /* Grid layout for music track cards */
-    .music-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .track-card {
-      background: #222;
-      border-radius: 5px;
-      overflow: hidden;
-      padding: 1rem;
-      text-align: center;
-    }
-    .track-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-    }
-    .track-card h3 {
-      font-family: 'BrolinkDemo', sans-serif;
-      margin-bottom: 0.5rem;
-    }
-    
-    /* ----- Merch Section ----- */
-    #merch {
-      background-color: #1a1a1a;
-    }
-    #merch h2 {
-      font-family: 'BrolinkDemo', sans-serif;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
-    /* Grid layout for merch items */
-    .merch-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .merch-card {
-      background: #222;
-      border-radius: 5px;
-      overflow: hidden;
-      padding: 1rem;
-      text-align: center;
-    }
-    .merch-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-    }
-    .merch-card h3 {
-      font-family: 'BrolinkDemo', sans-serif;
-      margin-bottom: 0.5rem;
-    }
-    
-    /* ----- Tour/Gigs Section ----- */
-    #tour {
-      background-color: #1a1a1a;
-    }
-    #tour h2 {
-      font-family: 'BrolinkDemo', sans-serif;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
-    /* Grid layout for gig/event cards */
-    .tour-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .gig-card {
-      background: #222;
-      border-radius: 5px;
-      overflow: hidden;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-    }
-    .gig-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-    }
-    .gig-card .gig-info {
-      text-align: left;
-    }
-    .gig-card .gig-info h3 {
-      font-family: 'BrolinkDemo', sans-serif;
-      margin-bottom: 0.5rem;
-    }
-    .gig-card .gig-info p {
-      font-size: 0.9rem;
-      margin-bottom: 0.3rem;
-    }
-    
-    /* ----- Contact Section ----- */
-    #contact {
-      background-color: #1a1a1a;
-    }
-    #contact h2 {
-      font-family: 'BrolinkDemo', sans-serif;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
-    .contact-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    /* Contact form styling */
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 5px;
-      background: #222;
-      color: #eee;
-    }
-    .contact-form button {
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 5px;
-      background: #444;
-      color: #eee;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .contact-form button:hover {
-      background: #666;
-    }
-    /* Social links styling */
-    .social-links {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .social-links a {
-      margin: 0 10px;
-      font-size: 1.5rem;
-    }
-    
-    /* ----- Footer Section ----- */
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    
-    /* =====================
-       Responsive Styles
-    =======================*/
-    @media (max-width: 768px) {
-      /* Hide desktop navigation and show hamburger icon */
-      nav ul.desktop-menu {
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-      /* Show mobile menu when toggled */
-      .mobile-menu.show {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- =====================
-       Header Section with Navigation
-  =======================-->
-  <header>
-    <!-- Logo: Replace text with your provided logo image -->
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/Bingbongbigdong/neobro-website/1d8534879b66fb11cdc14f0cefe24323f4bda844/assets/images/neobro-logo.png" alt="Logo">
-    </div>
-    <!-- Navigation Menu -->
-    <nav>
-      <!-- Desktop Navigation Menu -->
-      <ul class="desktop-menu">
-        <li><a href="#landing">Home</a></li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#merch">Merch</a></li>
-        <li><a href="#tour">Tour/Gigs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <!-- Hamburger Icon for Mobile -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <!-- Mobile Navigation Menu -->
-      <div class="mobile-menu" id="mobileMenu">
-        <ul>
-          <li><a href="#landing" onclick="toggleMobileMenu()">Home</a></li>
-          <li><a href="#music" onclick="toggleMobileMenu()">Music</a></li>
-          <li><a href="#merch" onclick="toggleMobileMenu()">Merch</a></li>
-          <li><a href="#tour" onclick="toggleMobileMenu()">Tour/Gigs</a></li>
-          <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
-  <!-- =====================
-       Landing Section (Hero)
-  =======================-->
-  <section id="landing">
-    <div class="content">
-      <h1>Welcome to the Beat</h1>
-      <p>Experience the rhythm of the night</p>
-    </div>
-  </section>
-  
-  <!-- =====================
-       Music Section
-  =======================-->
-  <section id="music">
-    <h2>Music</h2>
-    <p style="text-align: center; margin-bottom: 2rem;">Check out my latest tracks</p>
-    <!-- Grid container for music track cards -->
-    <div class="music-grid">
-      <!-- Track Card 1 -->
-      <div class="track-card">
-        <img src="https://picsum.photos/300/300?random=2" alt="Track Image 1">
-        <h3>Track Title 1</h3>
-        <p>Short description of track 1.</p>
-        <!-- Example play icon -->
-        <i class="fas fa-play"></i>
-      </div>
-      <!-- Track Card 2 -->
-      <div class="track-card">
-        <img src="https://picsum.photos/300/300?random=3" alt="Track Image 2">
-        <h3>Track Title 2</h3>
-        <p>Short description of track 2.</p>
-        <i class="fas fa-play"></i>
-      </div>
-      <!-- Track Card 3 -->
-      <div class="track-card">
-        <img src="https://picsum.photos/300/300?random=4" alt="Track Image 3">
-        <h3>Track Title 3</h3>
-        <p>Short description of track 3.</p>
-        <i class="fas fa-play"></i>
-      </div>
-    </div>
-  </section>
-  
-  <!-- =====================
-       Merch Section
-  =======================-->
-  <section id="merch">
-    <h2>Merch</h2>
-    <p style="text-align: center; margin-bottom: 2rem;">Check out my exclusive merchandise</p>
-    <!-- Grid container for merch items -->
-    <div class="merch-grid">
-      <!-- Merch Card 1 -->
-      <div class="merch-card">
-        <img src="https://picsum.photos/300/300?random=5" alt="Merch Image 1">
-        <h3>Merch Item 1</h3>
-        <p>$29.99</p>
-      </div>
-      <!-- Merch Card 2 -->
-      <div class="merch-card">
-        <img src="https://picsum.photos/300/300?random=6" alt="Merch Image 2">
-        <h3>Merch Item 2</h3>
-        <p>$39.99</p>
-      </div>
-      <!-- Merch Card 3 -->
-      <div class="merch-card">
-        <img src="https://picsum.photos/300/300?random=7" alt="Merch Image 3">
-        <h3>Merch Item 3</h3>
-        <p>$19.99</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- =====================
-       Tour/Gigs Section
-  =======================-->
-  <section id="tour">
-    <h2>Tour/Gigs</h2>
-    <p style="text-align: center; margin-bottom: 2rem;">Upcoming shows and events</p>
-    <!-- Grid container for gig/event cards -->
-    <div class="tour-grid">
-      <!-- Gig Card 1 -->
-      <div class="gig-card">
-        <img src="https://picsum.photos/400/200?random=8" alt="Gig Image 1">
-        <div class="gig-info">
-          <h3>Event Title 1</h3>
-          <p><strong>Date:</strong> June 25, 2025</p>
-          <p><strong>Venue:</strong> Club XYZ</p>
-          <p><strong>Location:</strong> City, Country</p>
-        </div>
-      </div>
-      <!-- Gig Card 2 -->
-      <div class="gig-card">
-        <img src="https://picsum.photos/400/200?random=9" alt="Gig Image 2">
-        <div class="gig-info">
-          <h3>Event Title 2</h3>
-          <p><strong>Date:</strong> July 10, 2025</p>
-          <p><strong>Venue:</strong> Arena ABC</p>
-          <p><strong>Location:</strong> City, Country</p>
-        </div>
-      </div>
-      <!-- Gig Card 3 -->
-      <div class="gig-card">
-        <img src="https://picsum.photos/400/200?random=10" alt="Gig Image 3">
-        <div class="gig-info">
-          <h3>Event Title 3</h3>
-          <p><strong>Date:</strong> August 5, 2025</p>
-          <p><strong>Venue:</strong> Festival Grounds</p>
-          <p><strong>Location:</strong> City, Country</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- =====================
-       Contact Section
-  =======================-->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-container">
-      <p style="text-align: center; margin-bottom: 2rem;">Get in touch for bookings or collaborations</p>
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-      <!-- Social Media Links with FontAwesome icons -->
-      <div class="social-links">
-        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- =====================
-       Footer Section
-  =======================-->
-  <footer>
-    <p>&copy; 2025 DJ NAME. All rights reserved.</p>
-  </footer>
-  
-  <!-- =====================
-       JavaScript for Mobile Menu Toggle
-  =======================-->
-  <script>
-    // Wait for the DOM content to load before attaching event listeners
-    document.addEventListener("DOMContentLoaded", function() {
-      // Get the hamburger icon and mobile menu elements
-      const hamburger = document.getElementById('hamburger');
-      con<!--
-  DJ Artist Website Template (Updated)
-  - Uses a custom header font ("Brolink DEMO") loaded via @font-face.
-  - The header logo is now your provided logo image.
-  - Body text uses Roboto from Google Fonts.
-  - Includes a responsive navigation (desktop links & mobile hamburger menu).
-  - Sections: Landing, Music, Merch, Tour/Gigs, and Contact.
-  - Placeholder images from Picsum.photos and social icons from FontAwesome.
--->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Meta tags for character encoding and responsiveness -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DJ Artist Website</title>
-
-  <!-- Load Roboto font for body text from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- FontAwesome for social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer" />
-
-  <style>
-    /* =====================
-       Custom Header Font: Brolink DEMO
-       Load the font from your GitHub repository using the raw URL.
-    =======================*/
-    @font-face {
-      font-family: 'BrolinkDemo';
-      src: url('https://raw.githubusercontent.com/Bingbongbigdong/neobro-website/1d8534879b66fb11cdc14f0cefe24323f4bda844/assets/fonts/Brolink%20DEMO.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    /* =====================
-       Global Styles
-    =======================*/
-    /* Reset margins/paddings and set box-sizing */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    /* Base body styling: dark background, light text, using Roboto */
-    body {
-      background-color: #111;
-      color: #eee;
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-    }
-    /* Anchor tag styling */
-    a {
-      color: #eee;
-      text-decoration: none;
-    }
-
-    /* =====================
-       Header & Navigation
-    =======================*/
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 1rem 2rem;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    /* Logo styling: now using the custom logo image */
-    .logo img {
-      /* Adjust height as needed */
-      height: 50px;
-    }
-    /* Desktop navigation menu styling */
-    nav ul.desktop-menu {
-      list-style: none;
-      display: flex;
-      align-items: center;
-    }
-    nav ul.desktop-menu li {
-      margin-left: 2rem;
-    }
-    /* Use custom header font for navigation links if desired */
-    nav ul.desktop-menu li a {
-      font-family: 'BrolinkDemo', sans-serif;
-      font-size: 1rem;
-    }
-    
-    /* Hamburger icon for mobile (hidden on desktop) */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      z-index: 1100; /* Ensure it's above the mobile menu */
-    }
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: #eee;
-      margin-bottom: 4px;
-      border-radius: 5px;
-    }
-    
-    /* Mobile menu container (hidden by default) */
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 2rem;
-      background: rgba(0, 0, 0, 0.9);
-      border-radius: 5px;
-      overflow: hidden;
-      z-index: 1050;
-    }
-    .mobile-menu ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-    }
-    .mobile-menu ul li {
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #222;
-    }
-    .mobile-menu ul li a {
-      font-family: 'BrolinkDemo', sans-serif;
-      font-size: 1rem;
-    }
-    
-    /* =====================
-       Section Styles
-    =======================*/
-    /* General section spacing */
     section {
       padding: 100px 2rem;
       min-height: 100vh;
@@ -695,37 +119,21 @@
     
     /* ----- Landing Section (Hero) ----- */
     #landing {
-      /* Background image from Picsum.photos */
-      background: url('https://picsum.photos/1920/1080?random=1') center/cover no-repeat;
+      background: black;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 2rem;
     }
-    /* Dark overlay for better text contrast */
-    #landing::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    /* Landing content styling using custom header font */
-    #landing .content {
-      position: relative;
-      z-index: 1;
-      font-family: 'BrolinkDemo', sans-serif;
-      color: #fff;
-    }
-    #landing h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    #landing p {
-      font-size: 1.2rem;
+    /* Style for the large logo in the landing section */
+    #landing .landing-logo {
+      max-width: 80%;
+      height: auto;
+      border: 5px solid #eee;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
     
     /* ----- Music Section ----- */
@@ -738,7 +146,6 @@
       margin-bottom: 2rem;
       font-size: 2.5rem;
     }
-    /* Grid layout for music track cards */
     .music-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -772,7 +179,6 @@
       margin-bottom: 2rem;
       font-size: 2.5rem;
     }
-    /* Grid layout for merch items */
     .merch-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -806,7 +212,6 @@
       margin-bottom: 2rem;
       font-size: 2.5rem;
     }
-    /* Grid layout for gig/event cards */
     .tour-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -852,7 +257,6 @@
       max-width: 600px;
       margin: 0 auto;
     }
-    /* Contact form styling */
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -875,7 +279,6 @@
     .contact-form button:hover {
       background: #666;
     }
-    /* Social links styling */
     .social-links {
       text-align: center;
       margin-top: 2rem;
@@ -897,14 +300,12 @@
        Responsive Styles
     =======================*/
     @media (max-width: 768px) {
-      /* Hide desktop navigation and show hamburger icon */
       nav ul.desktop-menu {
         display: none;
       }
       .hamburger {
         display: flex;
       }
-      /* Show mobile menu when toggled */
       .mobile-menu.show {
         display: block;
       }
@@ -916,13 +317,10 @@
        Header Section with Navigation
   =======================-->
   <header>
-    <!-- Logo: Replace text with your provided logo image -->
     <div class="logo">
       <img src="https://raw.githubusercontent.com/Bingbongbigdong/neobro-website/1d8534879b66fb11cdc14f0cefe24323f4bda844/assets/images/neobro-logo.png" alt="Logo">
     </div>
-    <!-- Navigation Menu -->
     <nav>
-      <!-- Desktop Navigation Menu -->
       <ul class="desktop-menu">
         <li><a href="#landing">Home</a></li>
         <li><a href="#music">Music</a></li>
@@ -930,13 +328,11 @@
         <li><a href="#tour">Tour/Gigs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <!-- Hamburger Icon for Mobile -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <!-- Mobile Navigation Menu -->
       <div class="mobile-menu" id="mobileMenu">
         <ul>
           <li><a href="#landing" onclick="toggleMobileMenu()">Home</a></li>
@@ -951,12 +347,12 @@
   
   <!-- =====================
        Landing Section (Hero)
+       Welcome text replaced with centered responsive logo
   =======================-->
   <section id="landing">
-    <div class="content">
-      <h1>Welcome to the Beat</h1>
-      <p>Experience the rhythm of the night</p>
-    </div>
+    <img src="https://raw.githubusercontent.com/Bingbongbigdong/neobro-website/1d8534879b66fb11cdc14f0cefe24323f4bda844/assets/images/neobro-logo.png" 
+         alt="Logo" 
+         class="landing-logo">
   </section>
   
   <!-- =====================
@@ -965,24 +361,19 @@
   <section id="music">
     <h2>Music</h2>
     <p style="text-align: center; margin-bottom: 2rem;">Check out my latest tracks</p>
-    <!-- Grid container for music track cards -->
     <div class="music-grid">
-      <!-- Track Card 1 -->
       <div class="track-card">
         <img src="https://picsum.photos/300/300?random=2" alt="Track Image 1">
         <h3>Track Title 1</h3>
         <p>Short description of track 1.</p>
-        <!-- Example play icon -->
         <i class="fas fa-play"></i>
       </div>
-      <!-- Track Card 2 -->
       <div class="track-card">
         <img src="https://picsum.photos/300/300?random=3" alt="Track Image 2">
         <h3>Track Title 2</h3>
         <p>Short description of track 2.</p>
         <i class="fas fa-play"></i>
       </div>
-      <!-- Track Card 3 -->
       <div class="track-card">
         <img src="https://picsum.photos/300/300?random=4" alt="Track Image 3">
         <h3>Track Title 3</h3>
@@ -998,21 +389,17 @@
   <section id="merch">
     <h2>Merch</h2>
     <p style="text-align: center; margin-bottom: 2rem;">Check out my exclusive merchandise</p>
-    <!-- Grid container for merch items -->
     <div class="merch-grid">
-      <!-- Merch Card 1 -->
       <div class="merch-card">
         <img src="https://picsum.photos/300/300?random=5" alt="Merch Image 1">
         <h3>Merch Item 1</h3>
         <p>$29.99</p>
       </div>
-      <!-- Merch Card 2 -->
       <div class="merch-card">
         <img src="https://picsum.photos/300/300?random=6" alt="Merch Image 2">
         <h3>Merch Item 2</h3>
         <p>$39.99</p>
       </div>
-      <!-- Merch Card 3 -->
       <div class="merch-card">
         <img src="https://picsum.photos/300/300?random=7" alt="Merch Image 3">
         <h3>Merch Item 3</h3>
@@ -1027,9 +414,7 @@
   <section id="tour">
     <h2>Tour/Gigs</h2>
     <p style="text-align: center; margin-bottom: 2rem;">Upcoming shows and events</p>
-    <!-- Grid container for gig/event cards -->
     <div class="tour-grid">
-      <!-- Gig Card 1 -->
       <div class="gig-card">
         <img src="https://picsum.photos/400/200?random=8" alt="Gig Image 1">
         <div class="gig-info">
@@ -1039,7 +424,6 @@
           <p><strong>Location:</strong> City, Country</p>
         </div>
       </div>
-      <!-- Gig Card 2 -->
       <div class="gig-card">
         <img src="https://picsum.photos/400/200?random=9" alt="Gig Image 2">
         <div class="gig-info">
@@ -1049,7 +433,6 @@
           <p><strong>Location:</strong> City, Country</p>
         </div>
       </div>
-      <!-- Gig Card 3 -->
       <div class="gig-card">
         <img src="https://picsum.photos/400/200?random=10" alt="Gig Image 3">
         <div class="gig-info">
@@ -1069,7 +452,6 @@
     <h2>Contact</h2>
     <div class="contact-container">
       <p style="text-align: center; margin-bottom: 2rem;">Get in touch for bookings or collaborations</p>
-      <!-- Contact Form -->
       <div class="contact-form">
         <form action="#" method="post">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -1078,7 +460,6 @@
           <button type="submit">Send Message</button>
         </form>
       </div>
-      <!-- Social Media Links with FontAwesome icons -->
       <div class="social-links">
         <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
@@ -1100,35 +481,14 @@
        JavaScript for Mobile Menu Toggle
   =======================-->
   <script>
-    // Wait for the DOM content to load before attaching event listeners
     document.addEventListener("DOMContentLoaded", function() {
-      // Get the hamburger icon and mobile menu elements
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobileMenu');
-      
-      // Toggle the mobile menu visibility when the hamburger is clicked
       hamburger.addEventListener('click', function() {
         mobileMenu.classList.toggle('show');
       });
     });
     
-    // Function called by mobile menu links to toggle (hide) the menu
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.toggle('show');
-    }
-  </script>
-</body>
-</html>
-st mobileMenu = document.getElementById('mobileMenu');
-      
-      // Toggle the mobile menu visibility when the hamburger is clicked
-      hamburger.addEventListener('click', function() {
-        mobileMenu.classList.toggle('show');
-      });
-    });
-    
-    // Function called by mobile menu links to toggle (hide) the menu
     function toggleMobileMenu() {
       const mobileMenu = document.getElementById('mobileMenu');
       mobileMenu.classList.toggle('show');
